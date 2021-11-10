@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">MÜHENDİSLİK</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Ana Sayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Hakkımızda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Ekibimiz</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Galeri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact.html">İletişim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="p-5 text-center iletisim">
+        <div class="container">
+          <h2 class="mb-5">İletişim</h2>
+          <hr>
+          <form action="" id="form1" onkeyup="control('form1')">
+            <div class="mb-3 row">
+              <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Ad :</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control iletisim-form" id="exampleFormControlInput1" onkeypress="return message(event)"; pattern="[A-Za-z]{3,20}" required>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="exampleFormControlInput2" class="col-sm-2 col-form-label">Soyad :</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control iletisim-form" id="exampleFormControlInput2" onkeypress="return message(event)"; pattern="[A-Za-z]{3,20}" required>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="exampleFormControlInput3" class="col-sm-2 col-form-label">E-mail :</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control iletisim-form " id="exampleFormControlInput3" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Mesajınız :</label>
+              <div class="col-sm-10">
+                <textarea class="form-control iletisim-form" id="exampleFormControlTextarea1" rows="5" required></textarea>
+                
+              </div>
+            </div>
+            <div class="mb-3 col-sm-5">
+              <button type="button" id="gonder" class="btn btn-dark align-self-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Gönder</button>
+              <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Uyarı</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Emin Misin?
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Kapat</button>
+                      <button type="button" class="btn btn-dark" data-bs-dismiss="modal" onclick="formsend()">Değişiklikleri Kaydet</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          
+          </form>
+         
+        </div>
+      </section>
+    <footer class=" p-3 sosyalmedya">
+        <div class="">
+          <ul>
+            <li>
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+            </li>
+        </ul>
+        </div>
+      </footer>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
